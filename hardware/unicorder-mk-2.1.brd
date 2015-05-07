@@ -162,45 +162,23 @@
 </layers>
 <board>
 <plain>
-<wire x1="-0.1" y1="32.3" x2="-0.1" y2="3" width="0" layer="20"/>
-<wire x1="-0.1" y1="3" x2="2.9" y2="0" width="0" layer="20" curve="90"/>
-<wire x1="2.9" y1="0" x2="35.1" y2="0" width="0" layer="20"/>
-<wire x1="35.1" y1="0" x2="38.1" y2="3" width="0" layer="20" curve="90"/>
-<wire x1="38.1" y1="3" x2="38.1" y2="32.3" width="0" layer="20"/>
-<wire x1="38.1" y1="32.3" x2="-0.1" y2="32.3" width="0" layer="20"/>
-<text x="24.08" y="28.6" size="0.8" layer="22" font="vector" ratio="12" rot="MR180" align="bottom-center">SDA</text>
-<text x="26.62" y="28.6" size="0.8" layer="22" font="vector" ratio="12" rot="MR180" align="bottom-center">SCL</text>
-<text x="21.54" y="28.6" size="0.6" layer="22" font="vector" ratio="12" rot="MR180" align="bottom-center">INT</text>
-<text x="19" y="28.6" size="0.6" layer="22" font="vector" ratio="12" rot="MR180" align="bottom-center">ADDR</text>
-<text x="16.46" y="28.6" size="0.6" layer="22" font="vector" ratio="12" rot="MR180" align="bottom-center">3Vo</text>
-<text x="13.92" y="28.6" size="0.8" layer="22" font="vector" ratio="12" rot="MR180" align="bottom-center">GND</text>
-<text x="11.38" y="28.6" size="0.8" layer="22" font="vector" ratio="12" rot="MR180" align="bottom-center">VIN</text>
+<wire x1="-0.1" y1="38.1" x2="-0.1" y2="0" width="0" layer="20"/>
+<wire x1="-0.1" y1="0" x2="52.1" y2="0" width="0" layer="20"/>
+<wire x1="52.1" y1="0" x2="52.1" y2="38.1" width="0" layer="20"/>
+<wire x1="52.1" y1="38.1" x2="-0.1" y2="38.1" width="0" layer="20"/>
+<text x="21.92" y="34.4" size="0.8" layer="21" font="vector" ratio="12" rot="R180" align="bottom-center">SDA</text>
+<text x="19.38" y="34.4" size="0.8" layer="21" font="vector" ratio="12" rot="R180" align="bottom-center">SCL</text>
+<text x="24.46" y="34.4" size="0.6" layer="21" font="vector" ratio="12" rot="R180" align="bottom-center">INT</text>
+<text x="27" y="34.4" size="0.6" layer="21" font="vector" ratio="12" rot="R180" align="bottom-center">ADDR</text>
+<text x="29.54" y="34.4" size="0.6" layer="21" font="vector" ratio="12" rot="R180" align="bottom-center">3Vo</text>
+<text x="32.08" y="34.4" size="0.8" layer="21" font="vector" ratio="12" rot="R180" align="bottom-center">GND</text>
+<text x="34.62" y="34.4" size="0.8" layer="21" font="vector" ratio="12" rot="R180" align="bottom-center">VIN</text>
 </plain>
 <libraries>
 <library name="A_butts">
 <packages>
 <package name="DUMMY">
 <description>NOTHING HERE!!! For when you want a symbol with no package as an option against symbols with a package.</description>
-</package>
-<package name="DIP08">
-<description>&lt;b&gt;Dual In Line&lt;/b&gt;</description>
-<wire x1="-5.08" y1="2.54" x2="5.08" y2="2.54" width="0.1524" layer="21"/>
-<wire x1="-5.08" y1="2.54" x2="-5.08" y2="0.889" width="0.1524" layer="21"/>
-<wire x1="-5.08" y1="-0.889" x2="-5.08" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="2.54" x2="5.08" y2="-2.54" width="0.1524" layer="21"/>
-<wire x1="-5.08" y1="-2.54" x2="5.08" y2="-2.54" width="0.1524" layer="21"/>
-<pad name="1" x="-3.81" y="-3.81" drill="0.8" diameter="1.4" shape="octagon"/>
-<pad name="2" x="-1.27" y="-3.81" drill="0.8" diameter="1.4" shape="octagon"/>
-<pad name="3" x="1.27" y="-3.81" drill="0.8" diameter="1.4" shape="octagon"/>
-<pad name="4" x="3.81" y="-3.81" drill="0.8" diameter="1.4" shape="octagon"/>
-<pad name="5" x="3.81" y="3.81" drill="0.8" diameter="1.4" shape="octagon"/>
-<pad name="6" x="1.27" y="3.81" drill="0.8" diameter="1.4" shape="octagon"/>
-<pad name="7" x="-1.27" y="3.81" drill="0.8" diameter="1.4" shape="octagon"/>
-<pad name="8" x="-3.81" y="3.81" drill="0.8" diameter="1.4" shape="octagon"/>
-<text x="0" y="0" size="0.8128" layer="27" font="vector" ratio="12" align="center">&gt;VALUE</text>
-<text x="-5.315" y="0" size="0.8128" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center">&gt;NAME</text>
-<wire x1="-5.08" y1="-0.889" x2="-5.08" y2="0.889" width="0.1524" layer="21" curve="180"/>
-<circle x="-3.81" y="-1.905" radius="0.254" width="0" layer="21"/>
 </package>
 <package name="C025-024X044">
 <description>&lt;b&gt;CAPACITOR&lt;/b&gt;&lt;p&gt;
@@ -212,87 +190,20 @@ grid 2.5 mm, outline 2.4 x 4.4 mm</description>
 <text x="-2.286" y="0" size="0.4064" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center">&gt;NAME</text>
 <text x="2.286" y="0" size="0.4064" layer="27" font="vector" ratio="12" rot="R270" align="bottom-center">&gt;VALUE</text>
 </package>
-<package name="RESISTOR-AXIAL-PTH-7.62MM">
-<description>1W Resistor, 0.6" wide&lt;p&gt;
-
-Yageo CFR series &lt;a href="http://www.yageo.com/pdf/yageo/Leaded-R_CFR_2008.pdf"&gt;http://www.yageo.com/pdf/yageo/Leaded-R_CFR_2008.pdf&lt;/a&gt;</description>
-<pad name="P$1" x="-3.81" y="0" drill="1" diameter="1.6" shape="octagon"/>
-<pad name="P$2" x="3.81" y="0" drill="1" diameter="1.6" shape="octagon"/>
-<text x="-4.953" y="0" size="0.4" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center">&gt;Name</text>
-<text x="4.953" y="0" size="0.4" layer="21" font="vector" ratio="12" rot="R90" align="top-center">&gt;Value</text>
-<wire x1="-2.8" y1="0" x2="-1.5875" y2="0" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-0.7" x2="-0.762" y2="0.7" width="0.1524" layer="21"/>
-<wire x1="-0.762" y1="0.7" x2="-0.254" y2="-0.7" width="0.1524" layer="21"/>
-<wire x1="-0.254" y1="-0.7" x2="0.254" y2="0.7" width="0.1524" layer="21"/>
-<wire x1="0.254" y1="0.7" x2="0.762" y2="-0.7" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-0.7" x2="-1.5875" y2="0" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="-0.7" x2="1.27" y2="0.7" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="0.7" x2="1.5875" y2="0" width="0.1524" layer="21"/>
-<wire x1="1.5875" y1="0" x2="2.8" y2="0" width="0.1524" layer="21"/>
-</package>
-<package name="AVR-JST-6-PTH-RA-I2C">
-<pad name="RESET" x="-5" y="0" drill="0.9" diameter="1.4224" shape="octagon"/>
-<pad name="MISO" x="-3" y="0" drill="0.9" diameter="1.4224" shape="octagon"/>
-<pad name="GND" x="-1" y="0" drill="0.9" diameter="1.4224" shape="octagon"/>
-<pad name="MOSI/SDA" x="1" y="0" drill="0.9" diameter="1.4224" shape="octagon"/>
-<pad name="SCK" x="3" y="0" drill="0.9" diameter="1.4224" shape="octagon"/>
-<pad name="VCC" x="5" y="0" drill="0.9" diameter="1.4224" shape="octagon"/>
-<text x="8.5" y="0" size="0.762" layer="25" font="vector" ratio="12" rot="R90" align="top-center">&gt;NAME</text>
-<wire x1="-8" y1="6.25" x2="-8" y2="-1.35" width="0.1524" layer="21"/>
-<wire x1="8" y1="6.25" x2="8" y2="-1.35" width="0.1524" layer="21"/>
-<wire x1="-8" y1="-1.35" x2="-7" y2="-1.35" width="0.1524" layer="21"/>
-<wire x1="7" y1="-1.35" x2="8" y2="-1.35" width="0.1524" layer="21"/>
-<wire x1="-7" y1="0.25" x2="-7" y2="-1.35" width="0.1524" layer="21"/>
-<wire x1="7" y1="0.25" x2="7" y2="-1.35" width="0.1524" layer="21"/>
-<wire x1="-7" y1="0.25" x2="-5.9" y2="0.25" width="0.1524" layer="21"/>
-<wire x1="-4.1" y1="0.25" x2="-3.9" y2="0.25" width="0.1524" layer="21"/>
-<wire x1="-2.1" y1="0.25" x2="-1.9" y2="0.25" width="0.1524" layer="21"/>
-<wire x1="-0.1" y1="0.25" x2="0.1" y2="0.25" width="0.1524" layer="21"/>
-<wire x1="1.9" y1="0.25" x2="2.1" y2="0.25" width="0.1524" layer="21"/>
-<wire x1="3.9" y1="0.25" x2="4.1" y2="0.25" width="0.1524" layer="21"/>
-<wire x1="5.9" y1="0.25" x2="7" y2="0.25" width="0.1524" layer="21"/>
-<wire x1="-8" y1="6.25" x2="8" y2="6.25" width="0.1524" layer="21"/>
-<text x="5" y="-1" size="0.5" layer="21" font="vector" ratio="12" align="top-center">VCC</text>
-<text x="3" y="-1" size="0.5" layer="21" font="vector" ratio="12" align="top-center">SCK</text>
-<text x="1" y="-1" size="0.5" layer="21" font="vector" ratio="12" align="top-center">MOSI</text>
-<text x="-1" y="-1" size="0.5" layer="21" font="vector" ratio="12" align="top-center">GND</text>
-<text x="-3" y="-1" size="0.5" layer="21" font="vector" ratio="12" align="top-center">MISO</text>
-<text x="-5" y="-1" size="0.5" layer="21" font="vector" ratio="12" align="top-center">RST</text>
-<text x="1" y="-1.6" size="0.35" layer="21" font="vector" ratio="12" align="top-center">(SDA)</text>
-<text x="3" y="-1.6" size="0.35" layer="21" font="vector" ratio="12" align="top-center">(SCL)</text>
-</package>
-<package name="ADAFRUIT_128X64_OLED">
-<pad name="DATA" x="-8.89" y="0" drill="0.9" diameter="1.6" shape="octagon"/>
-<pad name="CLK" x="-6.35" y="0" drill="0.9" diameter="1.6" shape="octagon"/>
-<pad name="D/C" x="-3.81" y="0" drill="0.9" diameter="1.6" shape="octagon"/>
-<pad name="RST" x="-1.27" y="0" drill="0.9" diameter="1.6" shape="octagon"/>
-<pad name="CS" x="1.27" y="0" drill="0.9" diameter="1.6" shape="octagon"/>
-<pad name="3VO" x="3.81" y="0" drill="0.9" diameter="1.6" shape="octagon"/>
-<pad name="VIN" x="6.35" y="0" drill="0.9" diameter="1.6" shape="octagon"/>
-<pad name="GND" x="8.89" y="0" drill="0.9" diameter="1.6" shape="octagon"/>
-<text x="-8.89" y="-1.27" size="0.8" layer="21" font="vector" ratio="12" align="top-center">DAT</text>
-<text x="-6.35" y="-1.27" size="0.8" layer="21" font="vector" ratio="12" align="top-center">CLK</text>
-<text x="-3.81" y="-1.27" size="0.8" layer="21" font="vector" ratio="12" align="top-center">D/C</text>
-<text x="-1.27" y="-1.27" size="0.8" layer="21" font="vector" ratio="12" align="top-center">RST</text>
-<text x="1.27" y="-1.27" size="0.8" layer="21" font="vector" ratio="12" align="top-center">CS</text>
-<text x="3.81" y="-1.27" size="0.8" layer="21" font="vector" ratio="12" align="top-center">3Vo</text>
-<text x="6.35" y="-1.27" size="0.8" layer="21" font="vector" ratio="12" align="top-center">VIN</text>
-<text x="8.89" y="-1.27" size="0.8" layer="21" font="vector" ratio="12" align="top-center">GND</text>
-<wire x1="-16" y1="3.07" x2="16" y2="3.07" width="0.1524" layer="21"/>
-<wire x1="16" y1="3.07" x2="19" y2="0.07" width="0.1524" layer="21" curve="-90"/>
-<wire x1="-19" y1="0.07" x2="-19" y2="-22.43" width="0.1524" layer="21"/>
-<wire x1="-19" y1="-22.43" x2="-16" y2="-25.43" width="0.1524" layer="21" curve="90"/>
-<wire x1="-16" y1="-25.43" x2="16" y2="-25.43" width="0.1524" layer="21"/>
-<wire x1="16" y1="-25.43" x2="19" y2="-22.43" width="0.1524" layer="21" curve="90"/>
-<wire x1="19" y1="-22.43" x2="19" y2="0.07" width="0.1524" layer="21"/>
-<wire x1="-16" y1="3.07" x2="-19" y2="0.07" width="0.1524" layer="21" curve="90"/>
-<hole x="-16" y="0.07" drill="3"/>
-<hole x="16" y="0.07" drill="3"/>
-<hole x="-16" y="-22.43" drill="3"/>
-<hole x="16" y="-22.43" drill="3"/>
-<text x="0" y="-21" size="1.27" layer="25" font="vector" ratio="12" align="center">Adafruit OLED Display
-128x64 0.96"</text>
-<text x="0" y="-24" size="0.8" layer="25" font="vector" ratio="12" align="center">(display faces up, dumbass)</text>
+<package name="RESISTOR-AXIAL-PTH-6.35MM">
+<pad name="P$1" x="-3.175" y="0" drill="0.8" diameter="1.5" shape="octagon"/>
+<pad name="P$2" x="3.175" y="0" drill="0.8" diameter="1.5" shape="octagon"/>
+<text x="-4.191" y="0" size="0.4" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center">&gt;NAME</text>
+<text x="4.191" y="0" size="0.4" layer="27" font="vector" ratio="12" rot="R90" align="top-center">&gt;VALUE</text>
+<wire x1="-2.24" y1="0" x2="-1.143" y2="0" width="0.1524" layer="21"/>
+<wire x1="-0.9525" y1="-0.508" x2="-0.5715" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="-0.5715" y1="0.508" x2="-0.1905" y2="-0.508" width="0.1524" layer="21"/>
+<wire x1="-0.1905" y1="-0.508" x2="0.1905" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="0.1905" y1="0.508" x2="0.5715" y2="-0.508" width="0.1524" layer="21"/>
+<wire x1="-0.9525" y1="-0.508" x2="-1.143" y2="0" width="0.1524" layer="21"/>
+<wire x1="0.5715" y1="-0.508" x2="0.9525" y2="0.508" width="0.1524" layer="21"/>
+<wire x1="0.9525" y1="0.508" x2="1.143" y2="0" width="0.1524" layer="21"/>
+<wire x1="1.143" y1="0" x2="2.24" y2="0" width="0.1524" layer="21"/>
 </package>
 <package name="JST-2-PH-VERT-PTH">
 <wire x1="-2.95" y1="-1.7" x2="-2.95" y2="2.8" width="0.2032" layer="21"/>
@@ -307,39 +218,15 @@ Yageo CFR series &lt;a href="http://www.yageo.com/pdf/yageo/Leaded-R_CFR_2008.pd
 <pad name="2" x="1" y="0" drill="0.9" shape="octagon"/>
 <text x="0" y="-1.89" size="0.4064" layer="25" font="vector" ratio="12" rot="R180" align="bottom-center">&gt;NAME</text>
 </package>
-<package name="SPDT-RA-2MM">
-<wire x1="-5.08" y1="2.0955" x2="-5.08" y2="-2.0955" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="2.0955" x2="5.08" y2="-2.0955" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="2.0955" x2="-5.08" y2="2.0955" width="0.1524" layer="21"/>
-<wire x1="5.08" y1="-2.0955" x2="1.905" y2="-2.0955" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-2.0955" x2="0.635" y2="-2.0955" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-2.0955" x2="-0.635" y2="-2.0955" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-2.0955" x2="-5.08" y2="-2.0955" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-2.0955" x2="-0.635" y2="-4.3815" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="-4.3815" x2="0.635" y2="-4.3815" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-4.3815" x2="0.635" y2="-2.0955" width="0.1524" layer="21"/>
-<pad name="1" x="-2.1" y="0" drill="1" diameter="1.6" shape="octagon"/>
-<pad name="2" x="0" y="0" drill="1" diameter="1.6" shape="octagon"/>
-<pad name="3" x="2.1" y="0" drill="1" diameter="1.6" shape="octagon"/>
-<text x="0" y="2.286" size="1.27" layer="25" font="vector" ratio="12" align="bottom-center">&gt;NAME</text>
-<wire x1="1.905" y1="-2.0955" x2="1.905" y2="-2.2225" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-2.6035" x2="1.905" y2="-2.7305" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="-4.2545" x2="-1.905" y2="-4.3815" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-3.1115" x2="1.905" y2="-3.2385" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="-2.7305" x2="-1.905" y2="-2.8575" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="-3.2385" x2="-1.905" y2="-3.3655" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="-3.7465" x2="-1.905" y2="-3.8735" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-3.6195" x2="1.905" y2="-3.7465" width="0.1524" layer="21"/>
-<wire x1="1.778" y1="-4.6355" x2="1.905" y2="-4.6355" width="0.1524" layer="21"/>
-<wire x1="-1.778" y1="-4.6355" x2="-1.651" y2="-4.6355" width="0.1524" layer="21"/>
-<wire x1="0.762" y1="-4.6355" x2="0.889" y2="-4.6355" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-4.6355" x2="1.397" y2="-4.6355" width="0.1524" layer="21"/>
-<wire x1="1.905" y1="-4.1275" x2="1.905" y2="-4.2545" width="0.1524" layer="21"/>
-<wire x1="0.254" y1="-4.6355" x2="0.381" y2="-4.6355" width="0.1524" layer="21"/>
-<wire x1="-0.254" y1="-4.6355" x2="-0.127" y2="-4.6355" width="0.1524" layer="21"/>
-<wire x1="-0.762" y1="-4.6355" x2="-0.635" y2="-4.6355" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-4.6355" x2="-1.143" y2="-4.6355" width="0.1524" layer="21"/>
-<wire x1="-1.905" y1="-2.2225" x2="-1.905" y2="-2.3495" width="0.1524" layer="21"/>
+<package name="SWITCH-SPDT">
+<wire x1="2.175" y1="5.815" x2="-2.175" y2="5.815" width="0.2032" layer="21"/>
+<wire x1="-2.175" y1="5.815" x2="-2.175" y2="-5.815" width="0.2032" layer="21"/>
+<wire x1="-2.175" y1="-5.815" x2="2.175" y2="-5.815" width="0.2032" layer="21"/>
+<wire x1="2.175" y1="-5.815" x2="2.175" y2="5.815" width="0.2032" layer="21"/>
+<pad name="1" x="0" y="2.54" drill="1.016" diameter="1.8796"/>
+<pad name="2" x="0" y="0" drill="1.016" diameter="1.8796"/>
+<pad name="3" x="0" y="-2.54" drill="1.016" diameter="1.8796"/>
+<text x="0" y="6.096" size="1.016" layer="25" font="vector" ratio="12" align="bottom-center">&gt;NAME</text>
 </package>
 <package name="1X07_PTH_SLIMASS">
 <wire x1="14.605" y1="1.27" x2="15.875" y2="1.27" width="0.2032" layer="21"/>
@@ -394,6 +281,92 @@ Yageo CFR series &lt;a href="http://www.yageo.com/pdf/yageo/Leaded-R_CFR_2008.pd
 <pad name="6" x="12.7" y="0" drill="1.2" diameter="1.9" shape="octagon" rot="R90"/>
 <pad name="7" x="15.24" y="0" drill="1.2" diameter="1.9" shape="octagon" rot="R90"/>
 <text x="0" y="1.5" size="0.5" layer="25" font="vector" ratio="12" align="bottom-center">&gt;NAME</text>
+</package>
+<package name="ARDUINO_SHIELD_NOOUTLINE_INSIDE_SMALLER">
+<wire x1="-1.27" y1="1.27" x2="1.27" y2="1.27" width="0.127" layer="21"/>
+<wire x1="1.27" y1="1.27" x2="1.27" y2="-19.05" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-19.05" x2="-1.27" y2="-19.05" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-19.05" x2="-1.27" y2="1.27" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-20.32" x2="1.27" y2="-20.32" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-20.32" x2="1.27" y2="-35.54" width="0.127" layer="21"/>
+<wire x1="1.27" y1="-35.54" x2="-1.27" y2="-35.54" width="0.127" layer="21"/>
+<wire x1="-1.27" y1="-35.54" x2="-1.27" y2="-20.32" width="0.127" layer="21"/>
+<wire x1="46.99" y1="1.27" x2="49.53" y2="1.27" width="0.127" layer="21"/>
+<wire x1="49.53" y1="1.27" x2="49.53" y2="-13.97" width="0.127" layer="21"/>
+<wire x1="49.53" y1="-13.97" x2="46.99" y2="-13.97" width="0.127" layer="21"/>
+<wire x1="46.99" y1="-13.97" x2="46.99" y2="1.27" width="0.127" layer="21"/>
+<wire x1="46.99" y1="-16.51" x2="49.53" y2="-16.51" width="0.127" layer="21"/>
+<wire x1="49.53" y1="-16.51" x2="49.53" y2="-31.75" width="0.127" layer="21"/>
+<wire x1="49.53" y1="-31.75" x2="46.99" y2="-31.75" width="0.127" layer="21"/>
+<wire x1="46.99" y1="-31.75" x2="46.99" y2="-16.51" width="0.127" layer="21"/>
+<pad name="RES" x="48.26" y="-30.48" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="3.3V" x="48.26" y="-27.94" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="5V" x="48.26" y="-25.4" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="GND@0" x="48.26" y="-22.86" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="GND@1" x="48.26" y="-20.32" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="VIN" x="48.26" y="-17.78" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="A0" x="48.26" y="-12.7" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="A1" x="48.26" y="-10.16" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="A2" x="48.26" y="-7.62" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="A3" x="48.26" y="-5.08" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="A4" x="48.26" y="-2.54" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="A5" x="48.26" y="0" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="RX" x="0" y="0" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="TX" x="0" y="-2.54" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D2" x="0" y="-5.08" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D3" x="0" y="-7.62" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D4" x="0" y="-10.16" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D5" x="0" y="-12.7" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D6" x="0" y="-15.24" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D7" x="0" y="-17.78" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D8" x="0" y="-21.59" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D9" x="0" y="-24.13" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D10" x="0" y="-26.67" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D11" x="0" y="-29.21" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D12" x="0" y="-31.75" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<pad name="D13" x="0" y="-34.29" drill="1" diameter="1.7" shape="octagon" rot="R90"/>
+<dimension x1="0" y1="0" x2="-0.6" y2="-35.6" x3="-3.4" y3="-17.8" textsize="0.5" textratio="12" layer="46" dtype="vertical" width="0.1" precision="1" visible="yes"/>
+<dimension x1="0.1" y1="1.3" x2="-0.6" y2="-35.6" x3="-6.1" y3="-17.15" textsize="0.5" textratio="12" layer="46" dtype="vertical" width="0.1" precision="1" visible="yes"/>
+</package>
+<package name="ADAFRUIT_128X32_OLED_I2C_CLOSER">
+<pad name="SDA" x="-6.35" y="0" drill="1.2" diameter="1.9" shape="octagon"/>
+<pad name="SCL" x="-3.81" y="0" drill="1.2" diameter="1.9" shape="octagon"/>
+<pad name="RST" x="-1.27" y="0" drill="1.2" diameter="1.9" shape="octagon"/>
+<pad name="GND" x="1.27" y="0" drill="1.2" diameter="1.9" shape="octagon"/>
+<pad name="3VO" x="3.81" y="0" drill="1.2" diameter="1.9" shape="octagon"/>
+<pad name="VIN" x="6.35" y="0" drill="1.2" diameter="1.9" shape="octagon"/>
+<wire x1="-17" y1="16.246" x2="-17" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-17" y1="-0.254" x2="-15" y2="-2.254" width="0.1524" layer="21" curve="90"/>
+<wire x1="-15" y1="-2.254" x2="15" y2="-2.254" width="0.1524" layer="21"/>
+<wire x1="15" y1="-2.254" x2="17" y2="-0.254" width="0.1524" layer="21" curve="90"/>
+<wire x1="17" y1="-0.254" x2="17" y2="16.246" width="0.1524" layer="21"/>
+<wire x1="17" y1="16.246" x2="15" y2="18.246" width="0.1524" layer="21" curve="90"/>
+<wire x1="15" y1="18.246" x2="-15" y2="18.246" width="0.1524" layer="21"/>
+<wire x1="-15" y1="18.246" x2="-17" y2="16.246" width="0.1524" layer="21" curve="90"/>
+<hole x="-15" y="16.246" drill="2.5"/>
+<hole x="15" y="16.246" drill="2.5"/>
+<hole x="15" y="0.254" drill="2.5"/>
+<hole x="-15" y="0.254" drill="2.5"/>
+<text x="-6.35" y="1.27" size="0.8" layer="21" font="vector" ratio="12" align="bottom-center">SDA</text>
+<text x="-3.81" y="1.27" size="0.8" layer="21" font="vector" ratio="12" align="bottom-center">SCL</text>
+<text x="-1.27" y="1.27" size="0.8" layer="21" font="vector" ratio="12" align="bottom-center">RST</text>
+<text x="1.27" y="1.27" size="0.8" layer="21" font="vector" ratio="12" align="bottom-center">GND</text>
+<text x="3.81" y="1.27" size="0.8" layer="21" font="vector" ratio="12" align="bottom-center">3Vo</text>
+<text x="6.35" y="1.27" size="0.8" layer="21" font="vector" ratio="12" align="bottom-center">VIN</text>
+<text x="0" y="18.5" size="1" layer="25" font="vector" ratio="12" align="bottom-center">&gt;NAME</text>
+<text x="0" y="16" size="1.4" layer="21" font="vector" ratio="12" align="center">128x32 I2C OLED</text>
+</package>
+<package name="DTS-6-SMALL-PADS">
+<wire x1="2.49" y1="3" x2="-2.49" y2="3" width="0.1524" layer="21"/>
+<wire x1="3" y1="-1.2" x2="3" y2="1.2" width="0.1524" layer="21"/>
+<wire x1="2.49" y1="-3" x2="-2.49" y2="-3" width="0.1524" layer="21"/>
+<wire x1="-3" y1="-1.2" x2="-3" y2="1.2" width="0.1524" layer="21"/>
+<circle x="0" y="0" radius="1.75" width="0.1524" layer="21"/>
+<pad name="1" x="-3.25" y="2.25" drill="1" diameter="1.778"/>
+<pad name="2" x="3.25" y="2.25" drill="1" diameter="1.778"/>
+<pad name="3" x="-3.25" y="-2.25" drill="1" diameter="1.778"/>
+<pad name="4" x="3.25" y="-2.25" drill="1" diameter="1.778"/>
+<text x="0" y="3.302" size="0.8128" layer="25" font="vector" ratio="12" align="bottom-center">&gt;NAME</text>
 </package>
 </packages>
 </library>
@@ -583,142 +556,142 @@ Please make sure your boards conform to these design rules.</description>
 <attribute name="VERSION" value="v01" x="13.87" y="-1.27" size="1.778" layer="27" display="off"/>
 <attribute name="DESIGNER" value="Nobody" x="13.87" y="-1.27" size="1.778" layer="27" display="off"/>
 </element>
-<element name="IC1" library="A_butts" package="DIP08" value="TINY85" x="19" y="14.1" smashed="yes">
-<attribute name="PROD_ID" value="IC-09445" x="19" y="14.1" size="0.5" layer="27" ratio="12" display="off"/>
-<attribute name="VALUE" x="19" y="14.1" size="0.8128" layer="25" font="vector" ratio="12" align="center"/>
-<attribute name="NAME" x="13.685" y="14.1" size="0.8128" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center"/>
+<element name="C1" library="A_butts" package="C025-024X044" value="0.1uF" x="31.08" y="9" smashed="yes" rot="R180">
+<attribute name="NAME" x="33.366" y="9" size="0.4064" layer="25" font="vector" ratio="12" rot="R270" align="bottom-center"/>
+<attribute name="VALUE" x="28.794" y="9" size="0.4064" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center"/>
 </element>
-<element name="C1" library="A_butts" package="C025-024X044" value="0.1uF" x="16.46" y="20.1" smashed="yes">
-<attribute name="NAME" x="14.174" y="20.1" size="0.4064" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="18.746" y="20.1" size="0.4064" layer="25" font="vector" ratio="12" rot="R270" align="bottom-center"/>
+<element name="C2" library="A_butts" package="C025-024X044" value="0.1uF" x="35.89" y="32.5" smashed="yes">
+<attribute name="NAME" x="33.604" y="32.5" size="0.4064" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center"/>
+<attribute name="VALUE" x="38.176" y="32.5" size="0.4064" layer="25" font="vector" ratio="12" rot="R270" align="bottom-center"/>
 </element>
-<element name="C2" library="A_butts" package="C025-024X044" value="0.1uF" x="26.62" y="22.1" smashed="yes">
-<attribute name="NAME" x="24.334" y="22.1" size="0.4064" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center"/>
-<attribute name="VALUE" x="28.906" y="22.1" size="0.4064" layer="25" font="vector" ratio="12" rot="R270" align="bottom-center"/>
+<element name="R2" library="A_butts" package="RESISTOR-AXIAL-PTH-6.35MM" value="4.7K" x="43.5" y="36.1" rot="R180"/>
+<element name="R3" library="A_butts" package="RESISTOR-AXIAL-PTH-6.35MM" value="4.7K" x="43.5" y="33.56" rot="R180"/>
+<element name="BATT" library="A_butts" package="JST-2-PH-VERT-PTH" value="M02JST-PTH-VERT" x="7" y="34.9" smashed="yes" rot="R180">
+<attribute name="NAME" x="7" y="36.79" size="0.4064" layer="25" font="vector" ratio="12" align="bottom-center"/>
 </element>
-<element name="C3" library="A_butts" package="C025-024X044" value="0.1uF" x="7" y="30.3" smashed="yes" rot="R180">
-<attribute name="NAME" x="9.286" y="30.3" size="0.4064" layer="25" font="vector" ratio="12" rot="R270" align="bottom-center"/>
-<attribute name="VALUE" x="4.714" y="30.3" size="0.4064" layer="25" font="vector" ratio="12" rot="R90" align="bottom-center"/>
+<element name="PWR" library="A_butts" package="SWITCH-SPDT" value="SWITCH-SPDTPTH-VERT-2.54MM" x="6" y="15"/>
+<element name="TSL2561" library="A_butts" package="1X07_PTH_SLIMASS" value="" x="19.38" y="36.1" smashed="yes">
+<attribute name="NAME" x="27" y="33.4" size="1" layer="25" font="vector" ratio="12" rot="R180" align="bottom-center"/>
 </element>
-<element name="R1" library="A_butts" package="RESISTOR-AXIAL-PTH-7.62MM" value="10K" x="11.5" y="14.1" smashed="yes" rot="R90">
-<attribute name="NAME" x="11.5" y="9.147" size="0.4" layer="25" font="vector" ratio="12" rot="R180" align="bottom-center"/>
-<attribute name="VALUE" x="11.5" y="19.053" size="0.4" layer="21" font="vector" ratio="12" rot="R180" align="top-center"/>
+<element name="SHIELD" library="A_butts" package="ARDUINO_SHIELD_NOOUTLINE_INSIDE_SMALLER" value="" x="1.87" y="36.1"/>
+<element name="DISPLAY1" library="A_butts" package="ADAFRUIT_128X32_OLED_I2C_CLOSER" value="ADAFRUIT_128X32_OLED_I2C" x="26" y="12.5" smashed="yes">
+<attribute name="NAME" x="24" y="10" size="1" layer="25" font="vector" ratio="12" align="top-center"/>
 </element>
-<element name="AVR_ISP" library="A_butts" package="AVR-JST-6-PTH-RA-I2C" value="AVR_SPI_PRG_6AVR-JST-PTH-RA-I2C" x="44.15" y="16.3" smashed="yes" rot="R270">
-<attribute name="NAME" x="44.15" y="7.8" size="0.762" layer="25" font="vector" ratio="12" align="top-center"/>
-</element>
-<element name="R2" library="A_butts" package="RESISTOR-AXIAL-PTH-7.62MM" value="4.7K" x="29.5" y="14.1" smashed="yes" rot="R270">
-<attribute name="NAME" x="29.5" y="19.053" size="0.4" layer="25" font="vector" ratio="12" align="bottom-center"/>
-<attribute name="VALUE" x="29.5" y="9.147" size="0.4" layer="21" font="vector" ratio="12" align="top-center"/>
-</element>
-<element name="R3" library="A_butts" package="RESISTOR-AXIAL-PTH-7.62MM" value="4.7K" x="26.5" y="14.1" smashed="yes" rot="R270">
-<attribute name="NAME" x="26.5" y="19.053" size="0.4" layer="25" font="vector" ratio="12" align="bottom-center"/>
-<attribute name="VALUE" x="26.5" y="9.147" size="0.4" layer="21" font="vector" ratio="12" align="top-center"/>
-</element>
-<element name="DISPLAY1" library="A_butts" package="ADAFRUIT_128X64_OLED" value="ADAFRUIT_128X64_OLED" x="19" y="25.53" smashed="yes"/>
-<element name="BATT" library="A_butts" package="JST-2-PH-VERT-PTH" value="M02JST-PTH-VERT" x="43.3" y="28.8" smashed="yes" rot="MR180">
-<attribute name="NAME" x="43.3" y="30.69" size="0.4064" layer="26" font="vector" ratio="12" rot="MR0" align="bottom-center"/>
-</element>
-<element name="PWR" library="A_butts" package="SPDT-RA-2MM" value="SWITCH-SPDTPTH-RA-2MM" x="2.1" y="15.2" smashed="yes" rot="R270">
-<attribute name="NAME" x="4.386" y="15.2" size="1.27" layer="25" font="vector" ratio="12" rot="R270" align="bottom-center"/>
-</element>
-<element name="TSL2561" library="A_butts" package="1X07_PTH_SLIMASS" value="" x="26.62" y="30.3" smashed="yes" rot="MR0">
-<attribute name="NAME" x="19" y="27.6" size="1" layer="26" font="vector" ratio="12" rot="MR180" align="bottom-center"/>
-</element>
+<element name="BUTT1" library="A_butts" package="DTS-6-SMALL-PADS" value="SPST-NO-TACT6MM-PTH-SMALL-PADS" x="9.5" y="4.5" rot="R180"/>
+<element name="BUTT2" library="A_butts" package="DTS-6-SMALL-PADS" value="SPST-NO-TACT6MM-PTH-SMALL-PADS" x="20.5" y="4.5" rot="R180"/>
+<element name="BUTT3" library="A_butts" package="DTS-6-SMALL-PADS" value="SPST-NO-TACT6MM-PTH-SMALL-PADS" x="31.5" y="4.5" rot="R180"/>
+<element name="BUTT4" library="A_butts" package="DTS-6-SMALL-PADS" value="SPST-NO-TACT6MM-PTH-SMALL-PADS" x="42.5" y="4.5" rot="R180"/>
 </elements>
 <signals>
 <signal name="VCC">
-<contactref element="IC1" pad="8"/>
 <contactref element="C1" pad="1"/>
-<contactref element="AVR_ISP" pad="VCC"/>
-<contactref element="R1" pad="P$2"/>
 <contactref element="R2" pad="P$2"/>
 <contactref element="R3" pad="P$2"/>
-<contactref element="DISPLAY1" pad="VIN"/>
 <contactref element="C2" pad="1"/>
-<contactref element="C3" pad="1"/>
 <contactref element="PWR" pad="3"/>
 <contactref element="TSL2561" pad="7"/>
-<wire x1="29.5" y1="10.29" x2="44.15" y2="11.3" width="0" layer="19" extent="1-1"/>
-<wire x1="26.5" y1="10.29" x2="29.5" y2="10.29" width="0" layer="19" extent="1-1"/>
-<wire x1="25.35" y1="22.1" x2="26.5" y2="10.29" width="0" layer="19" extent="1-1"/>
-<wire x1="25.35" y1="25.53" x2="25.35" y2="22.1" width="0" layer="19" extent="1-1"/>
-<wire x1="15.19" y1="20.1" x2="25.35" y2="22.1" width="0" layer="19" extent="1-1"/>
-<wire x1="15.19" y1="17.91" x2="15.19" y2="20.1" width="0" layer="19" extent="1-1"/>
-<wire x1="11.5" y1="17.91" x2="15.19" y2="17.91" width="0" layer="19" extent="1-1"/>
-<wire x1="2.1" y1="13.1" x2="11.5" y2="17.91" width="0" layer="19" extent="1-1"/>
-<wire x1="11.38" y1="30.3" x2="15.19" y2="20.1" width="0" layer="19" extent="1-1"/>
-<wire x1="8.27" y1="30.3" x2="11.38" y2="30.3" width="0" layer="19" extent="1-1"/>
+<contactref element="DISPLAY1" pad="VIN"/>
+<contactref element="SHIELD" pad="5V"/>
+<wire x1="32.35" y1="9" x2="48.43" y2="9" width="0.3" layer="1"/>
+<wire x1="48.43" y1="9" x2="50.13" y2="10.7" width="0.3" layer="1"/>
+<wire x1="32.35" y1="12.5" x2="32.35" y2="9" width="0.3" layer="1"/>
+<wire x1="34.62" y1="32.5" x2="34.62" y2="26.21" width="0.3" layer="1"/>
+<wire x1="34.62" y1="26.21" x2="34.665" y2="26.165" width="0.3" layer="1"/>
+<wire x1="34.665" y1="26.165" x2="50.13" y2="10.7" width="0.3" layer="1"/>
+<wire x1="34.62" y1="32.5" x2="34.62" y2="36.1" width="0.3" layer="1"/>
+<wire x1="40.325" y1="33.56" x2="40.325" y2="31.825" width="0.3" layer="1"/>
+<wire x1="40.325" y1="31.825" x2="34.665" y2="26.165" width="0.3" layer="1"/>
+<wire x1="40.325" y1="33.56" x2="40.325" y2="36.1" width="0.3" layer="1"/>
+<wire x1="6" y1="12.46" x2="32.35" y2="12.5" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND">
 <contactref element="C1" pad="2"/>
-<contactref element="IC1" pad="4"/>
-<contactref element="AVR_ISP" pad="GND"/>
 <polygon width="0.1524" layer="1">
 <vertex x="-0.1" y="0"/>
-<vertex x="-0.1" y="32.3"/>
-<vertex x="38.1" y="32.3"/>
-<vertex x="38.1" y="0"/>
+<vertex x="-0.1" y="38.2"/>
+<vertex x="52.2" y="38.2"/>
+<vertex x="52.2" y="0"/>
 </polygon>
-<contactref element="DISPLAY1" pad="GND"/>
 <contactref element="C2" pad="2"/>
-<contactref element="C3" pad="2"/>
 <contactref element="BATT" pad="1"/>
 <contactref element="TSL2561" pad="6"/>
-<wire x1="44.15" y1="17.3" x2="42.3" y2="28.8" width="0" layer="19" extent="1-1"/>
-<wire x1="27.89" y1="25.53" x2="42.3" y2="28.8" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="MOSI/SDA">
-<contactref element="AVR_ISP" pad="MOSI/SDA"/>
-<contactref element="IC1" pad="5"/>
-<contactref element="DISPLAY1" pad="DATA"/>
-<contactref element="R3" pad="P$1"/>
-<contactref element="TSL2561" pad="2"/>
-<wire x1="26.5" y1="17.91" x2="44.15" y2="15.3" width="0" layer="19" extent="1-1"/>
-<wire x1="22.81" y1="17.91" x2="26.5" y2="17.91" width="0" layer="19" extent="1-1"/>
-<wire x1="24.08" y1="30.3" x2="22.81" y2="17.91" width="0" layer="19" extent="1-1"/>
-<wire x1="10.11" y1="25.53" x2="24.08" y2="30.3" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="RST">
-<contactref element="AVR_ISP" pad="RESET"/>
-<contactref element="IC1" pad="1"/>
-<contactref element="R1" pad="P$1"/>
-<wire x1="15.19" y1="10.29" x2="44.15" y2="21.3" width="0" layer="19" extent="1-1"/>
-<wire x1="11.5" y1="10.29" x2="15.19" y2="10.29" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="SCK/SCL">
-<contactref element="AVR_ISP" pad="SCK"/>
-<contactref element="IC1" pad="7"/>
-<contactref element="DISPLAY1" pad="CLK"/>
-<contactref element="R2" pad="P$1"/>
-<contactref element="TSL2561" pad="1"/>
-<wire x1="29.5" y1="17.91" x2="44.15" y2="13.3" width="0" layer="19" extent="1-1"/>
-<wire x1="17.73" y1="17.91" x2="29.5" y2="17.91" width="0" layer="19" extent="1-1"/>
-<wire x1="12.65" y1="25.53" x2="17.73" y2="17.91" width="0" layer="19" extent="1-1"/>
-<wire x1="26.62" y1="30.3" x2="29.5" y2="17.91" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="MISO">
-<contactref element="AVR_ISP" pad="MISO"/>
-<contactref element="IC1" pad="6"/>
-<wire x1="20.27" y1="17.91" x2="44.15" y2="19.3" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="DISPLAY_RST">
-<contactref element="IC1" pad="2"/>
-<contactref element="DISPLAY1" pad="RST"/>
-<wire x1="17.73" y1="10.29" x2="17.73" y2="25.53" width="0" layer="19" extent="1-1"/>
+<contactref element="DISPLAY1" pad="GND"/>
+<contactref element="SHIELD" pad="GND@0"/>
+<contactref element="SHIELD" pad="GND@1"/>
+<contactref element="BUTT1" pad="3"/>
+<contactref element="BUTT1" pad="4"/>
+<contactref element="BUTT2" pad="3"/>
+<contactref element="BUTT2" pad="4"/>
+<contactref element="BUTT3" pad="3"/>
+<contactref element="BUTT3" pad="4"/>
+<contactref element="BUTT4" pad="3"/>
+<contactref element="BUTT4" pad="4"/>
 </signal>
 <signal name="V_BATT">
 <contactref element="BATT" pad="2"/>
 <contactref element="PWR" pad="2"/>
-<wire x1="2.1" y1="15.2" x2="44.3" y2="28.8" width="0" layer="19" extent="1-1"/>
+<wire x1="6" y1="15" x2="6" y2="34.9" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="DISPLAY_RST">
+<contactref element="DISPLAY1" pad="RST"/>
+<contactref element="SHIELD" pad="D4"/>
+<wire x1="1.87" y1="25.94" x2="3.56" y2="25.94" width="0.3" layer="1"/>
+<wire x1="3.56" y1="25.94" x2="19" y2="10.5" width="0.3" layer="1"/>
+<wire x1="19" y1="10.5" x2="22.73" y2="10.5" width="0.3" layer="1"/>
+<wire x1="22.73" y1="10.5" x2="24.73" y2="12.5" width="0.3" layer="1"/>
+</signal>
+<signal name="SDA">
+<contactref element="SHIELD" pad="A4"/>
+<contactref element="R3" pad="P$1"/>
+<contactref element="TSL2561" pad="2"/>
+<contactref element="DISPLAY1" pad="SDA"/>
+<wire x1="46.675" y1="33.56" x2="50.13" y2="33.56" width="0.3" layer="1"/>
+<wire x1="46.675" y1="33.56" x2="45" y2="31.885" width="0.3" layer="16"/>
+<wire x1="45" y1="31.885" x2="45" y2="27.032890625" width="0.3" layer="16"/>
+<wire x1="45" y1="27.032890625" x2="39.967109375" y2="22" width="0.3" layer="16"/>
+<wire x1="39.967109375" y1="22" x2="33" y2="22" width="0.3" layer="16"/>
+<via x="33" y="22" extent="1-16" drill="0.3302"/>
+<wire x1="33" y1="22" x2="29.2" y2="22" width="0.3" layer="1"/>
+<wire x1="29.2" y1="22" x2="29.15" y2="22" width="0.3" layer="1"/>
+<wire x1="29.15" y1="22" x2="19.65" y2="12.5" width="0.3" layer="1"/>
+<wire x1="21.92" y1="36.1" x2="21.92" y2="29.28" width="0.3" layer="1"/>
+<wire x1="21.92" y1="29.28" x2="29.2" y2="22" width="0.3" layer="1"/>
+</signal>
+<signal name="SCL">
+<contactref element="SHIELD" pad="A5"/>
+<contactref element="R2" pad="P$1"/>
+<contactref element="TSL2561" pad="1"/>
+<contactref element="DISPLAY1" pad="SCL"/>
+<wire x1="50.13" y1="36.1" x2="46.675" y2="36.1" width="0.3" layer="1"/>
+<wire x1="46.675" y1="36.1" x2="44" y2="33.425" width="0.3" layer="16"/>
+<wire x1="44" y1="33.425" x2="44" y2="28.032890625" width="0.3" layer="16"/>
+<wire x1="44" y1="28.032890625" x2="38.967109375" y2="23" width="0.3" layer="16"/>
+<wire x1="38.967109375" y1="23" x2="32.69" y2="23" width="0.3" layer="16"/>
+<wire x1="22.19" y1="12.5" x2="32.69" y2="23" width="0.3" layer="16"/>
+<wire x1="19.38" y1="36.1" x2="32.48" y2="23" width="0.3" layer="16"/>
+<wire x1="32.48" y1="23" x2="32.69" y2="23" width="0.3" layer="16"/>
+</signal>
+<signal name="BUTT1">
+<contactref element="BUTT1" pad="1"/>
+<contactref element="BUTT1" pad="2"/>
+<wire x1="6.25" y1="2.25" x2="12.75" y2="2.25" width="0.3" layer="1"/>
+</signal>
+<signal name="BUTT2">
+<contactref element="BUTT2" pad="1"/>
+<contactref element="BUTT2" pad="2"/>
+<wire x1="17.25" y1="2.25" x2="23.75" y2="2.25" width="0.3" layer="1"/>
+</signal>
+<signal name="BUTT3">
+<contactref element="BUTT3" pad="1"/>
+<contactref element="BUTT3" pad="2"/>
+<wire x1="28.25" y1="2.25" x2="34.75" y2="2.25" width="0.3" layer="1"/>
+</signal>
+<signal name="BUTT4">
+<contactref element="BUTT4" pad="1"/>
+<contactref element="BUTT4" pad="2"/>
+<wire x1="39.25" y1="2.25" x2="45.75" y2="2.25" width="0.3" layer="1"/>
 </signal>
 </signals>
 </board>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>
