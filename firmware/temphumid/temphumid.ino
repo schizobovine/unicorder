@@ -45,25 +45,18 @@ Adafruit_HTU21DF sensor_rh = Adafruit_HTU21DF();
 RTC_DS1307 rtc = RTC_DS1307();
 
 // Logging
+const uint8_t SD_CS   = 10;
+const uint8_t SD_MOSI = 11;
+const uint8_t SD_MISO = 12;
+const uint8_t SD_SCK  = 13;
+const uint8_t LOGMODE = O_READ | O_WRITE | O_CREAT | O_APPEND;
 File logfile;
-const uint8_t SD_CS   = 6;
-const uint8_t SD_MOSI = 5;
-const uint8_t SD_MISO = 3;
-const uint8_t SD_SCK  = 2;
-const uint8_t LOGMODE = O_WRITE | O_CREAT | O_APPEND;
 
-float t  = 0.0;
-float rh = 0.0;
+#define SERIAL_TIME_SET 0
 
-#define DEBUG 1
-#define SERIAL_TIME_SET 1
 #define LOGFILE "temp_rh.log"
+#define LOG_INTERVAL_MS 1000
 
-#if DEBUG
-// Serial debugging setup
-usec last_blat = 0;
-usec BLAT_INT = 1;
-#endif
 
 /***********************************************************************
  * "Helping"
@@ -76,51 +69,43 @@ usec BLAT_INT = 1;
 void timeset() {
   time_t newnow = 0;
 
-  Serial.begin(9600);
-  Serial.setTimeout(3000);
-
-  display.clearDisplay();
-  display.setCursor(0, 0);
-  display.println("timeset");
-  display.display();
-
-  if (Serial.find("T")) {
-    newnow = Serial.parseInt();
+  //Serial.setTimeout(3000);
+  if (Serial.available()) {
+    if (Serial.find("T")) {
+      newnow = Serial.parseInt();
+    }
   }
 
   if (newnow != 0) {
     rtc.adjust(DateTime(newnow));
   }
 
-  display.println(newnow);
-  display.display();
-  delay(1000);
-
 }
 #endif
 
 /*
- * Barf error info to microview display.
+ * Barf error info to display
  */
 void error(const char *msg, int pause=5000) {
   display.clearDisplay();
   display.setCursor(0, 0);
   display.println(msg);
   display.display();
+  Serial.println(msg);
   delay(pause);
 }
 
-//
-// Display current temp, setpoint temp, SSR level, and time since boot
-//
-void refreshDisplay() {
+/*
+ * Display current temp, humidity, date and time.
+ */
+void refreshDisplay(float t, float rh, DateTime *dt) {
 
   // Format strings, stored in program memory to avoid wasting precious
   // precious RAMz.
   PGM_P FMT = PSTR(
          "Temp %#5.1f\367C"
-    "\n" "RH     %#3.2f%"
-    "\n" "  %2.2u:%2.2u:%2.2u"
+    "\n" "RH    %#5.2f%%"
+    "\n" "%04d-%02d-%02d" " " "%02d:%02d:%02d"
   );
 
   // String-ify display data in a C-ish style way since the Arduino libs don't
@@ -128,12 +113,15 @@ void refreshDisplay() {
   // special linker flags are required to bring in the full vprintf
   // implementation for floating point number. Check the Makefile for the
   // voodoo.
-  char buff[21*4+1];
-  uint32_t now = millis() / 1000;
-  int h = now / 60 / 60 % 100;
-  int m = now / 60 % 60;
-  int s = now % 60;
-  snprintf_P(buff, sizeof(buff), FMT, t, rh, h, m, s);
+  char buff[64];
+  snprintf_P(buff, sizeof(buff), FMT, t, rh,
+    dt->year(),
+    dt->month(),
+    dt->day(),
+    dt->hour(),
+    dt->minute(),
+    dt->second()
+  );
   buff[sizeof(buff)-1] = '\0';
 
   // Actually shart chars to thingy
@@ -142,14 +130,37 @@ void refreshDisplay() {
   display.println(buff);
   display.display();
 
-#if DEBUG
-  if (USEC_DIFF(now, last_blat) > BLAT_INT) {
-    last_blat = now;
-    Serial.print(now); Serial.print(",");
-    Serial.print(t); Serial.print(",");
-    Serial.println(rh);
-  }
-#endif
+}
+
+/*
+ * String-ify display data in a C-ish style way since the Arduino libs don't
+ * really give us any way to handle this well (which is annoying). Note that
+ * special linker flags are required to bring in the full vprintf
+ * implementation for floating point number. Check the Makefile for the
+ * voodoo.
+ */
+void formatString(float temperature, float rh, DateTime *dt, char *buff, size_t bufflen) {
+
+  // Format strings, stored in program memory to avoid wasting precious
+  // precious RAMz.
+  PGM_P FMT = PSTR(
+    "%04d-%02d-%02d %02d:%02d:%02d," //timestamp
+    "%#6.1f,"                        //temperature
+    "%#6.2f,"                        //relative humidity
+    "\r\n"
+  );
+
+  snprintf_P(buff, bufflen, FMT,
+    dt->year(),
+    dt->month(),
+    dt->day(),
+    dt->hour(),
+    dt->minute(),
+    dt->second(),
+    temperature,
+    rh
+  );
+  buff[bufflen-1] = '\0';
 
 }
 
@@ -159,13 +170,16 @@ void refreshDisplay() {
 
 void setup() {
 
+  // For remote error reporting
+  delay(500);
+  Serial.begin(9600);
+
   // Boot up display
   Wire.begin();
   display.begin(DISPLAY_MODE, DISPLAY_ADDR);
   display.clearDisplay();
   display.setTextColor(DISPLAY_COLOR);
   display.setTextSize(DISPLAY_TEXTSIZE);
-  display.println("Hello!");
   display.display();
 
   // Init sensors
@@ -180,6 +194,7 @@ void setup() {
   rtc.begin();
 
   // Initalize SD card for logging
+  /*
   pinMode(SD_CS, OUTPUT);
   while (!SD.begin(SD_CS, SD_MOSI, SD_MISO, SD_SCK)) {
     error("Could not connect microSD card!");
@@ -188,12 +203,10 @@ void setup() {
   while (!logfile) {
     error("Error opening " LOGFILE "!");
   }
+  */
 
-
-#if DEBUG
-  Serial.begin(9600);
-  Serial.println("time,temp,rh");
-#endif
+  // Setup serial logging, too, while we're at it
+  Serial.println("timestamp,temperature,relative_humidity");
 
 }
 
@@ -203,7 +216,27 @@ void setup() {
 
 void loop() {
   
+#if SERIAL_TIME_SET
+  // Set time if compiled in
+  timeset();
+#endif
+
+  float temperature = sensor_temp.readTempC();
+  float rh = sensor_rh.readHumidity();
+  DateTime now = rtc.now();
+  
   // Update display
-  refreshDisplay();
+  refreshDisplay(temperature, rh, &now);
+
+  // Log to logfile & shart to serial
+  char buff[64];
+  formatString(temperature, rh, &now, buff, sizeof(buff));
+  //logfile.write(buff);
+  //logfile.flush();
+  Serial.print(buff);
+  Serial.flush();
+
+  // Pause for a sec before running again
+  delay(LOG_INTERVAL_MS);
 
 }
